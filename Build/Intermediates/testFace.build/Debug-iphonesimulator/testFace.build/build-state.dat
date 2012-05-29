@@ -1,0 +1,374 @@
+TtestFace
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/Info.plist testFace/testFace-Info.plist
+cProcessPCH /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.pth testFace/testFace-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.o /Users/millan/Documents/Xcode/testFace/testFace/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.o /Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.o /Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.o /Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.o /Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace normal i386
+cGenerateDSYMFile /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app.dSYM /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace
+cCopyStringsFile /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/en.lproj/InfoPlist.strings testFace/en.lproj/InfoPlist.strings
+cCompileStoryboard /Users/millan/Documents/Xcode/testFace/testFace/en.lproj/MainStoryboard.storyboard
+cTouch /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk
+c000000004F453DF80000000000000110
+t1329937912
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004FB9495F0000000000244490
+t1337543007
+s2376848
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+c000000004FB9495F00000000000CBA10
+t1337543007
+s834064
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004FB949600000000000353830
+t1337543008
+s3487792
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000004FB9496400000000000998D0
+t1337543012
+s628944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004FB9496A0000000000905E40
+t1337543018
+s9461312
+
+N/Users/millan/Documents/Xcode/testFace/../cvInterface/CVInterface.m
+c000000004FC4EC2600000000000000CD
+t1338305574
+s205
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-bxevzmyrayrwzthjwriparrahvqt/testFace-Prefix.pch.pth
+t2
+s0
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.pth
+t1338273956
+s4029020
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/CVInterface.o
+t2
+s0
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.o
+t1338315751
+s27944
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.o
+t1338273956
+s59428
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.o
+t1338325128
+s58508
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.o
+t1338325128
+s75668
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/cvInterface.o
+t2
+s0
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.o
+t1338273956
+s3180
+
+N/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/testFace.LinkFileList
+c000000004FC5107F00000000000002EA
+t1338314879
+s746
+
+N/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app
+t1338325246
+s204
+
+N/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app.dSYM
+t1338325129
+s102
+
+N/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/Info.plist
+t1338286068
+s926
+
+N/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/PkgInfo
+t1338286068
+s8
+
+N/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/en.lproj/InfoPlist.strings
+t1338273957
+s42
+
+N/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/en.lproj/MainStoryboard.storyboardc
+t1338325246
+s238
+
+N/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace
+t1338325129
+s56540
+
+N/Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.h
+c000000004FC4FB2B00000000000002D4
+t1338309419
+s724
+
+N/Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m
+c000000004FC513CA00000000000014E3
+t1338315722
+s5347
+
+N/Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.h
+c000000004FC470890000000000000125
+t1338273929
+s293
+
+N/Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m
+c000000004FC470890000000000000809
+t1338273929
+s2057
+
+N/Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.h
+c000000004FC53AA800000000000002BE
+t1338325672
+s702
+
+N/Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m
+c000000004FC53AB500000000000005CD
+t1338325685
+s1485
+
+N/Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.h
+c000000004FC531CC0000000000000377
+t1338323404
+s887
+
+N/Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m
+c000000004FC536DF0000000000001865
+t1338324703
+s6245
+
+N/Users/millan/Documents/Xcode/testFace/testFace/cvInterface.c
+c000000004FC4EB5A00000000000000A5
+t1338305370
+s165
+
+N/Users/millan/Documents/Xcode/testFace/testFace/cvInterface.m
+c000000004FC4EB770000000000000638
+t1338305399
+s1592
+
+N/Users/millan/Documents/Xcode/testFace/testFace/en.lproj/InfoPlist.strings
+c000000004FC47089000000000000002D
+t1338273929
+s45
+
+N/Users/millan/Documents/Xcode/testFace/testFace/en.lproj/MainStoryboard.storyboard
+c000000004FC53B0800000000000036EF
+t1338325768
+s14063
+
+N/Users/millan/Documents/Xcode/testFace/testFace/main.m
+c000000004FC470890000000000000160
+t1338273929
+s352
+
+N/Users/millan/Documents/Xcode/testFace/testFace/testFace-Prefix.pch
+c000000004FC47089000000000000013F
+t1338273929
+s319
+
+NtestFace/testFace-Info.plist
+c000000004FC4708900000000000005EC
+t1338273929
+s1516
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/../cvInterface/CVInterface.m
+r0
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m
+r0
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m
+r0
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m
+r0
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m
+r0
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/testFace/cvInterface.c
+r0
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/testFace/cvInterface.m
+r0
+
+CBuild AST from /Users/millan/Documents/Xcode/testFace/testFace/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies01f8cf887275b541^2387e4887275b541^---0#1#0#--18"Check dependencies36"8B27AAFC-F94C-4945-914A-A775B058166F-
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/CVInterface.o /Users/millan/Documents/Xcode/testFace/../cvInterface/CVInterface.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.o /Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s360008550.909734
+e360008551.081052
+r1
+xCompileC
+xBuild/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.o
+x/Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile /Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m6abfe9664b75b541^d8d514674b75b541^---0#0#0#-19%DVTDocumentLocation2@78"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m0000000000000000^3411"CompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.o testFace/FaceDetector.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/millan/Documents/Xcode/testFace    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-generated-files.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-own-target-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-all-target-headers.hmap -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-project-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/include -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources/i386 -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources -F/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator -include /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch -MMD -MT dependencies -MF /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.d --serialize-diagnostics /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.dia -c /Users/millan/Documents/Xcode/testFace/testFace/FaceDetector.m -o /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/FaceDetector.o36"8FF40185-2A18-4CB9-8A24-65BC27C5148B-
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.o /Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s359966756.658725
+e359966756.832472
+r1
+xCompileC
+xBuild/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.o
+x/Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m95b6a824a874b541^ea41d524a874b541^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m0000000000000000^3423"CompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.o testFace/XYZAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/millan/Documents/Xcode/testFace    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-generated-files.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-own-target-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-all-target-headers.hmap -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-project-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/include -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources/i386 -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources -F/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator -include /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch -MMD -MT dependencies -MF /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.d --serialize-diagnostics /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.dia -c /Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m -o /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZAppDelegate.o36"2F2A4830-4890-4E5D-8ABD-B7969C3A24E0-
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.o /Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s360018569.210594
+e360018569.457285
+r1
+xCompileC
+xBuild/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.o
+x/Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m5a2f36897275b541^62ba8c897275b541^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m0000000000000000^3489"CompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.o testFace/XYZFlipsideViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/millan/Documents/Xcode/testFace    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-generated-files.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-own-target-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-all-target-headers.hmap -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-project-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/include -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources/i386 -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources -F/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator -include /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch -MMD -MT dependencies -MF /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.d --serialize-diagnostics /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.dia -c /Users/millan/Documents/Xcode/testFace/testFace/XYZFlipsideViewController.m -o /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZFlipsideViewController.o36"DD876E63-1682-48BA-94D4-CA2B2025381A-
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.o /Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s360018569.003015
+e360018569.173128
+r1
+xCompileC
+xBuild/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.o
+x/Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m40dd00897275b541^55152e897275b541^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m0000000000000000^3465"CompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.o testFace/XYZMainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/millan/Documents/Xcode/testFace    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-generated-files.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-own-target-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-all-target-headers.hmap -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-project-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/include -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources/i386 -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources -F/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator -include /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch -MMD -MT dependencies -MF /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.d --serialize-diagnostics /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.dia -c /Users/millan/Documents/Xcode/testFace/testFace/XYZMainViewController.m -o /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/XYZMainViewController.o36"41FB420D-8147-442F-8A98-6E34E10059D9-
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/cvInterface.o /Users/millan/Documents/Xcode/testFace/testFace/cvInterface.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/cvInterface.o /Users/millan/Documents/Xcode/testFace/testFace/cvInterface.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.o /Users/millan/Documents/Xcode/testFace/testFace/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s359966756.656867
+e359966756.763216
+r1
+xCompileC
+xBuild/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.o
+x/Users/millan/Documents/Xcode/testFace/testFace/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/millan/Documents/Xcode/testFace/testFace/main.m7d40a824a874b541^836ac324a874b541^---0#0#0#-19%DVTDocumentLocation2@70"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/main.m0000000000000000^3363"CompileC Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.o testFace/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/millan/Documents/Xcode/testFace    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-generated-files.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-own-target-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-all-target-headers.hmap -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-project-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/include -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources/i386 -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources -F/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator -include /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch -MMD -MT dependencies -MF /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.dia -c /Users/millan/Documents/Xcode/testFace/testFace/main.m -o /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/main.o36"0CE1A5AF-C55C-4905-AFBF-24EABE6F350A-
+
+CCompileStoryboard /Users/millan/Documents/Xcode/testFace/testFace/en.lproj/MainStoryboard.storyboard
+s360018569.669398
+e360018571.980906
+r1
+xCompileStoryboard
+x/Users/millan/Documents/Xcode/testFace/testFace/en.lproj/MainStoryboard.storyboard
+o2012-05-30 05:09:31.266 Interface Builder Cocoa Touch Tool[11232:13203] CFPreferences: user home directory at file://localhost/Users/millan/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"CompileStoryboard testFace/en.lproj/MainStoryboard.storyboard23f4ab897275b541^9a26048c7275b541^-242"2012-05-30 05:09:31.266 Interface Builder Cocoa Touch Tool[11232:13203] CFPreferences: user home directory at file://localhost/Users/millan/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/en.lproj/MainStoryboard.storyboard0000000000000000^911"CompileStoryboard testFace/en.lproj/MainStoryboard.storyboard    cd /Users/millan/Documents/Xcode/testFace    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/en.lproj/MainStoryboard.storyboardc /Users/millan/Documents/Xcode/testFace/testFace/en.lproj/MainStoryboard.storyboard --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk36"F71618D7-42DA-478C-9AC6-7DBDE9002A84-
+
+CCopyStringsFile /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/en.lproj/InfoPlist.strings testFace/en.lproj/InfoPlist.strings
+s359966757.134457
+e359966757.148446
+r1
+xCopyStringsFile
+x/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/en.lproj/InfoPlist.strings
+xtestFace/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Copy testFace/en.lproj/InfoPlist.stringsf0882225a874b541^ee092625a874b541^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/en.lproj/InfoPlist.strings0000000000000000^597"CopyStringsFile Build/Products/Debug-iphonesimulator/testFace.app/en.lproj/InfoPlist.strings testFace/en.lproj/InfoPlist.strings    cd /Users/millan/Documents/Xcode/testFace    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/en.lproj -- testFace/en.lproj/InfoPlist.strings36"F706850B-904E-4AD0-A81B-86B7C5A8322C-
+
+CGenerateDSYMFile /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app.dSYM /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace
+s360018569.581303
+e360018569.656184
+r1
+xGenerateDSYMFile
+x/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app.dSYM
+x/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Generating /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app.dSYM95f094897275b541^3739a8897275b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app.dSYM/0000000000000000^676"GenerateDSYMFile Build/Products/Debug-iphonesimulator/testFace.app.dSYM Build/Products/Debug-iphonesimulator/testFace.app/testFace    cd /Users/millan/Documents/Xcode/testFace    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/dsymutil /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace -o /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app.dSYM36"02B54CA9-5750-45B5-87DC-EEF0018DDFAA-
+
+CLd /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace normal i386
+s360018569.489006
+e360018569.533554
+r1
+xLd
+x/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Link /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace25407d897275b541^5dde8c897275b541^---0#0#0#--1269"Ld Build/Products/Debug-iphonesimulator/testFace.app/testFace normal i386    cd /Users/millan/Documents/Xcode/testFace    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -L/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator -F/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator -filelist /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/Objects-normal/i386/testFace.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -Xlinker -no_implicit_dylibs -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -framework CoreImage -framework MobileCoreServices -framework UIKit -framework Foundation -framework CoreGraphics -o /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/testFace36"FB4A32ED-5430-4E1A-B5DB-276BA437DA37-
+
+CProcessInfoPlistFile /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/Info.plist testFace/testFace-Info.plist
+s359978868.671072
+e359978868.676658
+r1
+xProcessInfoPlistFile
+x/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/Info.plist
+xtestFace/testFace-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Process testFace/testFace-Info.plist02d9ab74d774b541^6473ad74d774b541^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/testFace-Info.plist0000000000000000^684"ProcessInfoPlistFile Build/Products/Debug-iphonesimulator/testFace.app/Info.plist testFace/testFace-Info.plist    cd /Users/millan/Documents/Xcode/testFace    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility testFace/testFace-Info.plist -genpkginfo /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app/Info.plist36"30C91CA7-09AD-41BF-BD48-E9B60718DB70-
+
+CProcessPCH /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-bxevzmyrayrwzthjwriparrahvqt/testFace-Prefix.pch.pth testFace/testFace-Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CProcessPCH /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.pth testFace/testFace-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s359966753.853238
+e359966756.649921
+r1
+xProcessPCH
+x/Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.pth
+xtestFace/testFace-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile testFace/testFace-Prefix.pch6589da21a874b541^1761a624a874b541^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/millan/Documents/Xcode/testFace/testFace/testFace-Prefix.pch0000000000000000^3278"ProcessPCH Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.pth testFace/testFace-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/millan/Documents/Xcode/testFace    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-conversion -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-generated-files.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-own-target-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-all-target-headers.hmap -iquote /Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/testFace-project-headers.hmap -I/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/include -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources/i386 -I/Users/millan/Documents/Xcode/testFace/Build/Intermediates/testFace.build/Debug-iphonesimulator/testFace.build/DerivedSources -F/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.dia -c /Users/millan/Documents/Xcode/testFace/testFace/testFace-Prefix.pch -o /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.pth -MMD -MT dependencies -MF /Users/millan/Documents/Xcode/testFace/Build/Intermediates/PrecompiledHeaders/testFace-Prefix-byiujvdcyylutoetlgznwpuzbnly/testFace-Prefix.pch.d36"FF1C34DF-4908-4360-838E-38772342EF7B-
+
+CProcessPCH /Users/millan/Library/Developer/Xcode/DerivedData/testFace-furnzpubgclzzoawutfdhabpujcv/Index/PrecompiledHeaders/testFace-Prefix-aikqjuslefsfzgcasvnxisgvlyfe_ast/testFace-Prefix.pch.pth testFace/testFace-Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/millan/Library/Developer/Xcode/DerivedData/testFace-furnzpubgclzzoawutfdhabpujcv/Index/PrecompiledHeaders/testFace-Prefix-fmsqhexjapnuvgdgcmyofrxyhydf_ast/testFace-Prefix.pch.pth testFace/testFace-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CTouch /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app
+s360018571.988852
+e360018572.029699
+r1
+xTouch
+x/Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Touch /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app5531fd8b7275b541^aa9b078c7275b541^---0#0#0#--408"Touch Build/Products/Debug-iphonesimulator/testFace.app    cd /Users/millan/Documents/Xcode/testFace    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/millan/Documents/Xcode/testFace/Build/Products/Debug-iphonesimulator/testFace.app36"E319E783-B8C9-4C60-8838-1FB702762D43-
+
