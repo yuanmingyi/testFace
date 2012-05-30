@@ -8,30 +8,45 @@
 
 #import "XYZMainViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
-#import "FaceDetector.h"
 
-@interface XYZMainViewController () 
+//NSString *createDateFileName() {
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; 
+//    [dateFormatter setDateFormat:@"yyyyMMddHHmmss'.jpg'"];
+//    NSString *fileName = [dateFormatter stringFromDate:[NSDate date]];
+//    return fileName;
+//}
 
+@interface XYZMainViewController ()  {
+    BOOL isDeleteImagePicker_;
+}
+
+@property (strong, nonatomic) XYZFlipsideViewController * workViewController;
 - (BOOL)startImagePickerController:(UIViewController *)viewController
                         sourceType:(UIImagePickerControllerSourceType)sourceType
                      usingDelegate:(id <UIImagePickerControllerDelegate, 
                                     UINavigationControllerDelegate>) delegate;
+- (void)deleteSelectedImage;
+- (BOOL)dismissImagePickerPopover;
+- (BOOL)dismissFlipsidePopover;
 @end
 
 @implementation XYZMainViewController
 @synthesize flipsidePopoverController;
 @synthesize imagePickerPopoverController;
-//@synthesize workViewController;
+@synthesize faceDetector;
+@synthesize workViewController;
 @synthesize cameraButton;
 @synthesize imageView;
 @synthesize menuButton;
 @synthesize originImage;
+@synthesize imageURL;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.imageView.image = self.originImage;
+    isDeleteImagePicker_ = NO;
 }
 
 - (void)viewDidUnload
@@ -39,11 +54,13 @@
     //[self setNavigationBar:nil];
     [self setFlipsidePopoverController:nil];
     [self setImagePickerPopoverController:nil];
-    //[self setWorkViewController:nil];
+    [self setFaceDetector:nil];
     [self setCameraButton:nil];
     [self setOriginImage:nil];
     [self setImageView:nil];
     [self setMenuButton:nil];
+    [self setWorkViewController:nil];
+    [self setImageURL:nil];
     [super viewDidUnload];
 }
 
@@ -53,85 +70,7 @@
     return YES;
 }
 
-#pragma mark - work View Controller
-
-- (void)workDetectFace:(BOOL)isDetect completion:(void (^)(void))completion{
-    if (isDetect) {
-        FaceDetector *detector = 
-            [FaceDetector detectorWithSource:DetectorSourceCoreImage
-                                    accuracy:DetectorAccuracyHigh
-                                detectInGray:YES];
-        [detector detectInImage:originImage];
-        self.imageView.image = detector.imageWithFaces; 
-    } else {
-        self.imageView.image = originImage;
-    }
-    if (completion) {
-        completion();
-    }
-}
-
-- (void)workSaveImage {
-    UIImage *markedImage = self.imageView.image;
-    UIImageWriteToSavedPhotosAlbum(markedImage, nil, nil, nil);
-}
-
-- (void)workLoadImage {
-    [self startImagePickerController:self
-                          sourceType:UIImagePickerControllerSourceType\
-SavedPhotosAlbum
-                       usingDelegate:self];
-}
-
-- (void)popoverControllerDidDismissPopover:
-(UIPopoverController *)popoverController {
-    if (popoverController == self.imagePickerPopoverController) {
-        self.imagePickerPopoverController = nil;
-    } else {
-        self.flipsidePopoverController = nil;
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
-        [[segue destinationViewController] setDelegate:self];
-        UIPopoverController *popoverController = 
-            [(UIStoryboardPopoverSegue *)segue popoverController];
-        self.flipsidePopoverController = popoverController;
-        popoverController.delegate = self;
-    }
-}
-
-- (IBAction)togglePopover:(id)sender
-{
-    if (self.imagePickerPopoverController) {
-        [self.imagePickerPopoverController dismissPopoverAnimated:YES];
-        self.imagePickerPopoverController = nil;
-    } else if (self.flipsidePopoverController) {
-        [self.flipsidePopoverController dismissPopoverAnimated:YES];
-        self.flipsidePopoverController = nil;
-    } else {
-        [self performSegueWithIdentifier:@"showAlternate" sender:sender];
-    }
-}
-
-- (IBAction)startCameraResponder:(id)sender {
-    if (sender == self.cameraButton) {
-        // close the popover
-        if (self.imagePickerPopoverController) {
-            [self.imagePickerPopoverController dismissPopoverAnimated:YES];
-            self.imagePickerPopoverController = nil;
-        }
-        if (self.flipsidePopoverController) {
-            [self.flipsidePopoverController dismissPopoverAnimated:YES];
-            self.flipsidePopoverController = nil;
-        }
-        [self startImagePickerController:self 
-                              sourceType:UIImagePickerControllerSourceTypeCamera
-                           usingDelegate:self];
-    }
-}
-
+#pragma mark -- helper methods
 - (BOOL)startImagePickerController:(UIViewController*)viewController
                         sourceType:(UIImagePickerControllerSourceType)sourceType
                      usingDelegate:(id<UIImagePickerControllerDelegate,
@@ -146,8 +85,8 @@ SavedPhotosAlbum
     
     cameraUI.sourceType = sourceType;
     cameraUI.mediaTypes = [NSArray arrayWithObjects:
-                                    (NSString*)kUTTypeImage, nil];
-
+                           (NSString*)kUTTypeImage, nil];
+    
     cameraUI.allowsEditing = NO;
     cameraUI.delegate = delegate;  
     
@@ -166,21 +105,140 @@ SavedPhotosAlbum
     return YES;
 }
 
+- (void)deleteSelectedImage {
+    NSError *error;
+    if (![[NSFileManager defaultManager] removeItemAtURL:self.imageURL 
+                                                   error:&error]) {
+        // failed to delete
+        UIAlertView *failedAlert = 
+        [[UIAlertView alloc] initWithTitle:@"Failed" 
+                                   message:error.description 
+                                  delegate:nil 
+                         cancelButtonTitle:@"ok"
+                         otherButtonTitles:nil];
+        [failedAlert show];
+    }
+}
+
+- (BOOL)dismissFlipsidePopover {
+    if (self.flipsidePopoverController) {
+        self.workViewController = nil;
+        [self.flipsidePopoverController dismissPopoverAnimated:YES];
+        self.flipsidePopoverController = nil;
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)dismissImagePickerPopover {
+    if (self.imagePickerPopoverController) {
+        [self.imagePickerPopoverController dismissPopoverAnimated:YES];
+        self.imagePickerPopoverController = nil;
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark - workDelegate Methods
+- (void)workDetectFace:(XYZFlipsideViewController*)controller
+            WithSource:(DetectorSource)source
+              accuracy:(DetectorAccuracy)accuracy {
+    FaceDetector *detector = 
+            [FaceDetector detectorWithSource:source
+                                    accuracy:accuracy
+                                detectInGray:YES];
+        [detector detectInImage:originImage];
+    self.imageView.image = detector.imageWithFaces;  
+    self.faceDetector = detector;
+    [controller updateSettings:detector];
+}
+
+- (void)workClearMark:(XYZFlipsideViewController *)controller {
+    self.imageView.image = self.originImage;
+    [self.faceDetector clearResult];
+    [controller updateSettings:self.faceDetector];
+}
+
+- (void)workSaveImage:(XYZFlipsideViewController *)controller {
+    UIImage *markedImage = self.imageView.image;
+    UIImageWriteToSavedPhotosAlbum(markedImage, nil, nil, nil);
+    //[controller updateSettings:self.faceDetector];
+}
+
+- (void)workDeleteImage:(XYZFlipsideViewController *)controller {
+    isDeleteImagePicker_ = YES;
+    [self startImagePickerController:self
+                          sourceType:UIImagePickerControllerSourceType\
+SavedPhotosAlbum
+                       usingDelegate:self];
+}
+
+- (void)workLoadImage:(XYZFlipsideViewController *)controller {
+    self.workViewController = controller;
+    isDeleteImagePicker_ = NO;
+    [self startImagePickerController:self
+                          sourceType:UIImagePickerControllerSourceType\
+SavedPhotosAlbum
+                       usingDelegate:self];
+}
+
+#pragma mark -- UIPopoverControllerDelegate Methods
+- (void)popoverControllerDidDismissPopover:
+(UIPopoverController *)popoverController {
+    if (popoverController == self.imagePickerPopoverController) {
+        self.imagePickerPopoverController = nil;
+    } else {
+        self.workViewController = nil;
+        self.flipsidePopoverController = nil;
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
+        [[segue destinationViewController] setDelegate:self];
+        UIPopoverController *popoverController = 
+            [(UIStoryboardPopoverSegue *)segue popoverController];
+        self.flipsidePopoverController = popoverController;
+        popoverController.delegate = self;
+        self.workViewController = (XYZFlipsideViewController*)
+                                    [popoverController contentViewController];
+        [self.workViewController updateSettings:self.faceDetector];        
+    }
+}
+
 # pragma mark -- UIImagePickerControllerDelegate Methods
 - (void)imagePickerController:(UIImagePickerController *)picker 
-didFinishPickingMediaWithInfo:(NSDictionary *)info {
+didFinishPickingMediaWithInfo:(NSDictionary *)info {    
+    if (isDeleteImagePicker_
+        && picker.sourceType != UIImagePickerControllerSourceTypeCamera) {
+        self.imageURL = [info objectForKey:
+                         UIImagePickerControllerReferenceURL];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comform" 
+                                                        message:@"Delete?"
+                                                       delegate:self
+                                              cancelButtonTitle:@"NO"
+                                              otherButtonTitles:@"YES",nil];
+        [alert show];                   
+        return;
+    }
+
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     if (!image) {
         image = [info objectForKey:UIImagePickerControllerOriginalImage];
     }
+
     self.originImage = image;
     self.imageView.image = image;
+    [self.faceDetector clearResult];
+    if (self.workViewController) {
+        [self.workViewController updateSettings:faceDetector];
+        self.workViewController = nil;
+    }
     
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
         [self dismissModalViewControllerAnimated:YES];
     } else {
-        [self.imagePickerPopoverController dismissPopoverAnimated:YES];
-        self.imagePickerPopoverController = nil;
+        [self dismissImagePickerPopover];
     }
 }
 
@@ -188,8 +246,37 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
         [self dismissModalViewControllerAnimated:YES];
     } else {
-        [self.imagePickerPopoverController dismissPopoverAnimated:YES];
-        self.imagePickerPopoverController = nil;
+        [self dismissImagePickerPopover];
+    }
+}
+
+# pragma mark -- UIAlertViewDelegate Methods
+- (void)alertView:(UIAlertView *)alertView 
+        clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([alertView.message isEqualToString:@"Delete?"]) {
+        if (buttonIndex == alertView.firstOtherButtonIndex) {
+            // comform to delete
+            [self deleteSelectedImage];
+        }
+    }
+}
+
+# pragma mark -- actions responder
+- (IBAction)togglePopover:(id)sender
+{
+    if (![self dismissImagePickerPopover] && ![self dismissFlipsidePopover]) {
+        [self performSegueWithIdentifier:@"showAlternate" sender:sender];
+    }
+}
+
+- (IBAction)startCameraResponder:(id)sender {
+    if (sender == self.cameraButton) {
+        // close the popover
+        [self dismissImagePickerPopover];
+        [self dismissFlipsidePopover];
+        [self startImagePickerController:self 
+                              sourceType:UIImagePickerControllerSourceTypeCamera
+                           usingDelegate:self];
     }
 }
 

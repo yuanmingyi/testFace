@@ -9,11 +9,7 @@
 #import "FaceDetector.h"
 
 @interface FaceDetector ()
-@property (assign, nonatomic) DetectorSource source;
-@property (assign, nonatomic) DetectorAccuracy accuracy;
-@property (strong, nonatomic) NSDictionary * detectorOptions;
-@property (strong, nonatomic) NSDictionary * contextOptions;
-@property (assign, nonatomic) BOOL detectInGray;
+
 @end
 
 @implementation FaceDetector
@@ -140,7 +136,10 @@
     // clean up
     CGContextRelease(cgContext);
     CGImageRelease(markedImage);
-    CGColorSpaceRelease(space);
 }
-
+- (void)clearResult {
+    imageWithFaces_ = nil;
+    faceRegions_ = nil;
+    faceCount_ = 0;
+}
 @end

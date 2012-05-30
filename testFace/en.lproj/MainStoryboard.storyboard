@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JrF-SP-i4u">
-                                <rect key="frame" x="8" y="9" width="104" height="37"/>
+                                <rect key="frame" x="8" y="51" width="104" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="save">
@@ -91,7 +91,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="web-sF-hnm">
-                                <rect key="frame" x="8" y="54" width="104" height="37"/>
+                                <rect key="frame" x="8" y="8" width="104" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="load">
@@ -106,7 +106,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K29-LU-xwy">
-                                <rect key="frame" x="8" y="99" width="104" height="37"/>
+                                <rect key="frame" x="8" y="143" width="104" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="detect face">
@@ -121,7 +121,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XnT-MX-y2k">
-                                <rect key="frame" x="8" y="228" width="104" height="37"/>
+                                <rect key="frame" x="8" y="331" width="104" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="clear">
@@ -135,25 +135,79 @@
                                     <action selector="clearMarkTouchUp:" destination="5" eventType="touchUpInside" id="vmr-lf-3N4"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" style="gray" id="6K6-uc-Rmk">
-                                <rect key="frame" x="50" y="108" width="20" height="20"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="qnj-Xd-Wt6">
+                                <rect key="frame" x="8" y="201" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                <segments>
+                                    <segment title="OpenCV"/>
+                                    <segment title="CI"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="lcq-cF-Din">
+                                <rect key="frame" x="29" y="180" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Cc9-M6-Cqg">
+                                <rect key="frame" x="8" y="249" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Low"/>
+                                    <segment title="High"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Accuracy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qr9-Os-GTG">
+                                <rect key="frame" x="26" y="230" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Faces Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ObU-07-LP8">
+                                <rect key="frame" x="8" y="284" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JZm-Sj-CqO">
+                                <rect key="frame" x="39" y="302" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView contentMode="scaleToFill" style="gray" id="6K6-uc-Rmk">
+                                <rect key="frame" x="50" y="303" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="ujG-1C-w1R">
-                                <rect key="frame" x="8" y="152" width="79" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GFA-T8-zw0">
+                                <rect key="frame" x="8" y="95" width="104" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Sck-NA-kIW">
-                                <rect key="frame" x="1" y="187" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="delete">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteImageTouchUp:" destination="5" eventType="touchUpInside" id="t8E-IZ-7DP"/>
+                                    <action selector="saveImageTouchUp:" destination="5" eventType="touchUpInside" id="Wz9-0T-wqP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="accuracySwitch" destination="Cc9-M6-Cqg" id="pdq-bb-HKq"/>
+                        <outlet property="faceCountLabel" destination="JZm-Sj-CqO" id="MsZ-s8-M2e"/>
+                        <outlet property="methodSwitch" destination="qnj-Xd-Wt6" id="IEl-ju-jYQ"/>
                         <outlet property="processIndicator" destination="6K6-uc-Rmk" id="gmI-xV-cEa"/>
                     </connections>
                 </viewController>
@@ -166,9 +220,13 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/XYZFlipsideViewController.h"/>
             <relationships>
                 <relationship kind="action" name="clearMarkTouchUp:"/>
+                <relationship kind="action" name="deleteImageTouchUp:"/>
                 <relationship kind="action" name="detectFaceTouchUp:"/>
                 <relationship kind="action" name="loadImageTouchUp:"/>
                 <relationship kind="action" name="saveImageTouchUp:"/>
+                <relationship kind="outlet" name="accuracySwitch" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="faceCountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="methodSwitch" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="processIndicator" candidateClass="UIActivityIndicatorView"/>
             </relationships>
         </class>

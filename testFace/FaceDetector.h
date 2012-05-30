@@ -13,14 +13,23 @@ typedef enum {DetectorAccuracyHigh, DetectorAccuracyLow} DetectorAccuracy;
 
 @interface FaceDetector : NSObject 
 
+#pragma mark -- detect result
 @property (strong, nonatomic, readonly) UIImage * imageWithFaces;
 @property (strong, nonatomic, readonly) NSArray * faceRegions;
 @property (assign, nonatomic, readonly) NSInteger faceCount;
+
+#pragma mark -- detect parameters
+@property (assign, nonatomic) DetectorSource source;
+@property (assign, nonatomic) DetectorAccuracy accuracy;
+@property (strong, nonatomic) NSDictionary * detectorOptions;
+@property (strong, nonatomic) NSDictionary * contextOptions;
+@property (assign, nonatomic) BOOL detectInGray;
 
 + (id)detectorWithSource:(DetectorSource)source 
                 accuracy:(DetectorAccuracy)accuracy
             detectInGray:(BOOL)detectInGray;
 - (id)init;
 - (void)detectInImage:(UIImage*)inImage;
+- (void)clearResult;
 
 @end

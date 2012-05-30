@@ -19,6 +19,7 @@
 		BEA534561574EB9A002D0AE2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534551574EB9A002D0AE2 /* MobileCoreServices.framework */; };
 		BEA5345F15752629002D0AE2 /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA5345E15752629002D0AE2 /* FaceDetector.m */; };
 		BEA534611575484A002D0AE2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534601575484A002D0AE2 /* CoreImage.framework */; };
+		BEA5346F15768DC6002D0AE2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5346E15768DC6002D0AE2 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		BEA5345D15752629002D0AE2 /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
 		BEA5345E15752629002D0AE2 /* FaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetector.m; sourceTree = "<group>"; };
 		BEA534601575484A002D0AE2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		BEA5346E15768DC6002D0AE2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA5346F15768DC6002D0AE2 /* AssetsLibrary.framework in Frameworks */,
 				BEA534611575484A002D0AE2 /* CoreImage.framework in Frameworks */,
 				BEA534561574EB9A002D0AE2 /* MobileCoreServices.framework in Frameworks */,
 				BEA534321574A809002D0AE2 /* UIKit.framework in Frameworks */,
@@ -62,6 +65,7 @@
 		BEA534221574A809002D0AE2 = {
 			isa = PBXGroup;
 			children = (
+				BEA5346E15768DC6002D0AE2 /* AssetsLibrary.framework */,
 				BEA534371574A809002D0AE2 /* testFace */,
 				BEA534301574A809002D0AE2 /* Frameworks */,
 				BEA5342E1574A809002D0AE2 /* Products */,
@@ -301,6 +305,7 @@
 				BEA534501574A809002D0AE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
