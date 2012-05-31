@@ -47,12 +47,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testFace/XYZMainViewController.m"
-         timestampString = "360090764.178051"
+         timestampString = "360163816.151877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "181"
-         endingLineNumber = "181"
-         landmarkName = "-prepareForSegue:sender:"
+         startingLineNumber = "194"
+         endingLineNumber = "194"
+         landmarkName = "-workLoadImage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -60,12 +60,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testFace/XYZMainViewController.m"
-         timestampString = "360090764.178051"
+         timestampString = "360163816.151877"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "189"
-         endingLineNumber = "189"
-         landmarkName = "-prepareForSegue:sender:"
+         startingLineNumber = "202"
+         endingLineNumber = "202"
+         landmarkName = "-popoverControllerDidDismissPopover:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "testFace/CameraViewController.m"
+         timestampString = "360163816.151877"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "testFace/XYZMainViewController.m"
+         timestampString = "360164248.840985"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "278"
+         endingLineNumber = "278"
+         landmarkName = "-cameraDidCancel"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

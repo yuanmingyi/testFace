@@ -11,7 +11,7 @@
 
 @class XYZFlipsideViewController;
 
-@protocol workDelegate
+@protocol WorkDelegate
 - (void)workDetectFace:(XYZFlipsideViewController*)controller
             WithSource:(DetectorSource)source
               accuracy:(DetectorAccuracy)accuracy;            
@@ -25,7 +25,7 @@
 @interface XYZFlipsideViewController : UIViewController
 
 @property (assign, nonatomic, readonly) CGSize size;
-@property (weak, nonatomic) id <workDelegate> delegate;
+@property (weak, nonatomic) id <WorkDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *processIndicator;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *methodSwitch;

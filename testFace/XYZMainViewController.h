@@ -7,17 +7,21 @@
 //
 
 #import "XYZFlipsideViewController.h"
+#import "CameraViewController.h"
 #import "FaceDetector.h"
 
 @interface XYZMainViewController : UIViewController 
-                                    <workDelegate, 
+                                    <WorkDelegate, 
                                     UIImagePickerControllerDelegate,
                                     UINavigationControllerDelegate,
                                     UIPopoverControllerDelegate,
-                                    UIAlertViewDelegate> 
+                                    UIAlertViewDelegate,
+                                    CameraViewDelegate> 
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 @property (strong, nonatomic) UIPopoverController *imagePickerPopoverController;
+@property (strong, nonatomic) CameraViewController *cameraView;
+
 @property (strong, nonatomic) FaceDetector *faceDetector;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;

@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CameraViewController : UIViewController
+@protocol CameraViewDelegate;
 
+@interface CameraViewController : UIViewController 
+                                    <UIImagePickerControllerDelegate,
+                                    UINavigationControllerDelegate>
+@property (weak, nonatomic) id <CameraViewDelegate> delegate;
+
+@property (strong, nonatomic) UIImagePickerController * imagePickerController;
+
+- (IBAction)shotTouchUp:(id)sender;
+- (IBAction)backTouchUp:(id)sender;
+- (IBAction)optionsTouchUp:(id)sender;
+
+- (BOOL)startCamera;
+@end
+
+@protocol CameraViewDelegate
+- (void)cameraDidCancel;
+- (void)cameraDidTakeAPhoto:(UIImage*)image;
 @end

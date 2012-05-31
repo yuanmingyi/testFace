@@ -71,6 +71,7 @@
     CIImage *ciImage = [CIImage imageWithCGImage:cgImage];    
     
     CIContext *ciContext = [CIContext contextWithOptions:self.contextOptions];
+             
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
                                               context:ciContext
                                               options:self.detectorOptions];
@@ -97,11 +98,11 @@
     
     // enumarate the detected features and draw them in the image
     NSMutableArray * faces = [[NSMutableArray alloc] init];
-    for (CIFeature *feature in featuresArray) {
+    for (CIFaceFeature *feature in featuresArray) {
         CGRect bounds = feature.bounds;
         // draw face bounds in the image
-        CGContextSetRGBFillColor(cgContext, 0.0, 0.0, 1.0, 1.0);
-        CGContextStrokeRectWithWidth(cgContext, bounds, 1.0);
+        CGContextSetRGBFillColor(cgContext, 1.0, 0.0, 0.0, 1.0);
+        CGContextStrokeRectWithWidth(cgContext, bounds, 3.0);
         // add bounds to array
         [faces addObject:[NSData dataWithBytes:&bounds length:sizeof(bounds)]];
         // if details in the face are avaliable, draw them in the image too

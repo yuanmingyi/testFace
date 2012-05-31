@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE9C7A85157786D200AD2C5E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9C7A84157786D200AD2C5E /* CameraViewController.m */; };
 		BEA534321574A809002D0AE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534311574A809002D0AE2 /* UIKit.framework */; };
 		BEA534341574A809002D0AE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534331574A809002D0AE2 /* Foundation.framework */; };
 		BEA534361574A809002D0AE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534351574A809002D0AE2 /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE9C7A83157786D200AD2C5E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		BE9C7A84157786D200AD2C5E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		BEA5342D1574A809002D0AE2 /* testFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA534311574A809002D0AE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEA534331574A809002D0AE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,9 +105,11 @@
 				BEA534471574A809002D0AE2 /* XYZMainViewController.m */,
 				BEA534491574A809002D0AE2 /* XYZFlipsideViewController.h */,
 				BEA5344A1574A809002D0AE2 /* XYZFlipsideViewController.m */,
-				BEA534381574A809002D0AE2 /* Supporting Files */,
 				BEA5345D15752629002D0AE2 /* FaceDetector.h */,
 				BEA5345E15752629002D0AE2 /* FaceDetector.m */,
+				BE9C7A83157786D200AD2C5E /* CameraViewController.h */,
+				BE9C7A84157786D200AD2C5E /* CameraViewController.m */,
+				BEA534381574A809002D0AE2 /* Supporting Files */,
 			);
 			path = testFace;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				BEA534481574A809002D0AE2 /* XYZMainViewController.m in Sources */,
 				BEA5344B1574A809002D0AE2 /* XYZFlipsideViewController.m in Sources */,
 				BEA5345F15752629002D0AE2 /* FaceDetector.m in Sources */,
+				BE9C7A85157786D200AD2C5E /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

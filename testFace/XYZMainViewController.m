@@ -33,6 +33,7 @@
 @implementation XYZMainViewController
 @synthesize flipsidePopoverController;
 @synthesize imagePickerPopoverController;
+@synthesize cameraView;
 @synthesize faceDetector;
 @synthesize workViewController;
 @synthesize cameraButton;
@@ -54,6 +55,7 @@
     //[self setNavigationBar:nil];
     [self setFlipsidePopoverController:nil];
     [self setImagePickerPopoverController:nil];
+    [self setCameraView:nil];
     [self setFaceDetector:nil];
     [self setCameraButton:nil];
     [self setOriginImage:nil];
@@ -89,8 +91,13 @@
     
     cameraUI.allowsEditing = NO;
     cameraUI.delegate = delegate;  
+    cameraUI.showsCameraControls = NO;
+    
+    cameraUI.videoQuality = UIImagePickerControllerQualityTypeHigh;
     
     if (sourceType == UIImagePickerControllerSourceTypeCamera) {
+        cameraUI.cameraOverlayView = self.view;
+        //cameraUI.cameraViewTransform = CGAffineTransformMake(-1,0,0,1,0,0);
         [viewController presentModalViewController:cameraUI animated:YES];
     } else {
         UIPopoverController *popover = [[UIPopoverController alloc] 
@@ -118,6 +125,12 @@
                          otherButtonTitles:nil];
         [failedAlert show];
     }
+}
+
+- (void)updateImage:(UIImage*)image {
+    self.originImage = image;
+    self.imageView.image = image;
+    [self.faceDetector clearResult];
 }
 
 - (BOOL)dismissFlipsidePopover {
@@ -194,7 +207,8 @@ SavedPhotosAlbum
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
+    NSString *segueIdentifier = [segue identifier];
+    if ([segueIdentifier isEqualToString:@"showMenu"]) {
         [[segue destinationViewController] setDelegate:self];
         UIPopoverController *popoverController = 
             [(UIStoryboardPopoverSegue *)segue popoverController];
@@ -203,14 +217,17 @@ SavedPhotosAlbum
         self.workViewController = (XYZFlipsideViewController*)
                                     [popoverController contentViewController];
         [self.workViewController updateSettings:self.faceDetector];        
+    } else if ([segueIdentifier isEqualToString:@"showCamera"]) {
+        self.cameraView = [segue destinationViewController];
+        self.cameraView.delegate = self;
+        [self.cameraView startCamera];
     }
 }
 
 # pragma mark -- UIImagePickerControllerDelegate Methods
 - (void)imagePickerController:(UIImagePickerController *)picker 
 didFinishPickingMediaWithInfo:(NSDictionary *)info {    
-    if (isDeleteImagePicker_
-        && picker.sourceType != UIImagePickerControllerSourceTypeCamera) {
+    if (isDeleteImagePicker_) {
         self.imageURL = [info objectForKey:
                          UIImagePickerControllerReferenceURL];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comform" 
@@ -227,19 +244,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
         image = [info objectForKey:UIImagePickerControllerOriginalImage];
     }
 
-    self.originImage = image;
-    self.imageView.image = image;
-    [self.faceDetector clearResult];
+    [self updateImage:image];
+    
     if (self.workViewController) {
         [self.workViewController updateSettings:faceDetector];
         self.workViewController = nil;
     }
     
-    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-        [self dismissModalViewControllerAnimated:YES];
-    } else {
-        [self dismissImagePickerPopover];
-    }
+    [self dismissImagePickerPopover];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -261,22 +273,31 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     }
 }
 
+# pragma mark -- CameraViewDelegate Mehtods
+- (void)cameraDidCancel {
+    self.cameraView = nil;
+}
+- (void)cameraDidTakeAPhoto:(UIImage *)image {
+    [self updateImage:image];
+}
+
 # pragma mark -- actions responder
 - (IBAction)togglePopover:(id)sender
 {
     if (![self dismissImagePickerPopover] && ![self dismissFlipsidePopover]) {
-        [self performSegueWithIdentifier:@"showAlternate" sender:sender];
+        [self performSegueWithIdentifier:@"showMenu" sender:sender];
     }
 }
 
 - (IBAction)startCameraResponder:(id)sender {
     if (sender == self.cameraButton) {
         // close the popover
-        [self dismissImagePickerPopover];
-        [self dismissFlipsidePopover];
-        [self startImagePickerController:self 
-                              sourceType:UIImagePickerControllerSourceTypeCamera
-                           usingDelegate:self];
+        [self performSegueWithIdentifier:@"showCamera" sender:sender];
+//        [self dismissImagePickerPopover];
+//        [self dismissFlipsidePopover];
+//        [self startImagePickerController:self 
+//                              sourceType:UIImagePickerControllerSourceTypeCamera
+//                           usingDelegate:self];
     }
 }
 
