@@ -25,6 +25,7 @@ typedef enum {DetectorAccuracyHigh, DetectorAccuracyLow} DetectorAccuracy;
 @property (strong, nonatomic) NSDictionary * contextOptions;
 @property (assign, nonatomic) BOOL detectInGray;
 
++ (void)loadCascadeData;
 + (id)detectorWithSource:(DetectorSource)source 
                 accuracy:(DetectorAccuracy)accuracy
             detectInGray:(BOOL)detectInGray;

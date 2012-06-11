@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BE9C7A85157786D200AD2C5E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9C7A84157786D200AD2C5E /* CameraViewController.m */; };
+		BEA3CAFC1584A8010082E6CF /* UIImage+TransformCVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEA3CAFA1584A8010082E6CF /* UIImage+TransformCVMat.mm */; };
+		BEA3CB001584AC490082E6CF /* UIAlertView+AlertBox.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA3CAFF1584AC490082E6CF /* UIAlertView+AlertBox.m */; };
+		BEA3CB071584B7270082E6CF /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = BEA3CB051584B7270082E6CF /* haarcascade_eye_tree_eyeglasses.xml */; };
+		BEA3CB081584B7270082E6CF /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = BEA3CB061584B7270082E6CF /* haarcascade_frontalface_alt.xml */; };
 		BEA534321574A809002D0AE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534311574A809002D0AE2 /* UIKit.framework */; };
 		BEA534341574A809002D0AE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534331574A809002D0AE2 /* Foundation.framework */; };
 		BEA534361574A809002D0AE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534351574A809002D0AE2 /* CoreGraphics.framework */; };
@@ -15,10 +19,10 @@
 		BEA5343E1574A809002D0AE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA5343D1574A809002D0AE2 /* main.m */; };
 		BEA534421574A809002D0AE2 /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA534411574A809002D0AE2 /* XYZAppDelegate.m */; };
 		BEA534451574A809002D0AE2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA534431574A809002D0AE2 /* MainStoryboard.storyboard */; };
-		BEA534481574A809002D0AE2 /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA534471574A809002D0AE2 /* XYZMainViewController.m */; };
+		BEA534481574A809002D0AE2 /* XYZMainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEA534471574A809002D0AE2 /* XYZMainViewController.mm */; };
 		BEA5344B1574A809002D0AE2 /* XYZFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA5344A1574A809002D0AE2 /* XYZFlipsideViewController.m */; };
 		BEA534561574EB9A002D0AE2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534551574EB9A002D0AE2 /* MobileCoreServices.framework */; };
-		BEA5345F15752629002D0AE2 /* FaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA5345E15752629002D0AE2 /* FaceDetector.m */; };
+		BEA5345F15752629002D0AE2 /* FaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEA5345E15752629002D0AE2 /* FaceDetector.mm */; };
 		BEA534611575484A002D0AE2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA534601575484A002D0AE2 /* CoreImage.framework */; };
 		BEA5346F15768DC6002D0AE2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA5346E15768DC6002D0AE2 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
@@ -26,6 +30,13 @@
 /* Begin PBXFileReference section */
 		BE9C7A83157786D200AD2C5E /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BE9C7A84157786D200AD2C5E /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		BEA3CAF91584A8010082E6CF /* UIImage+TransformCVMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+TransformCVMat.h"; path = "../../Utilities/UIImage+TransformCVMat.h"; sourceTree = "<group>"; };
+		BEA3CAFA1584A8010082E6CF /* UIImage+TransformCVMat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "UIImage+TransformCVMat.mm"; path = "../../Utilities/UIImage+TransformCVMat.mm"; sourceTree = "<group>"; };
+		BEA3CAFB1584A8010082E6CF /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = ../../Utilities/Utilities.h; sourceTree = "<group>"; };
+		BEA3CAFE1584AC490082E6CF /* UIAlertView+AlertBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AlertBox.h"; path = "../../Utilities/UIAlertView+AlertBox.h"; sourceTree = "<group>"; };
+		BEA3CAFF1584AC490082E6CF /* UIAlertView+AlertBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AlertBox.m"; path = "../../Utilities/UIAlertView+AlertBox.m"; sourceTree = "<group>"; };
+		BEA3CB051584B7270082E6CF /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		BEA3CB061584B7270082E6CF /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
 		BEA5342D1574A809002D0AE2 /* testFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA534311574A809002D0AE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEA534331574A809002D0AE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,12 +49,12 @@
 		BEA534411574A809002D0AE2 /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
 		BEA534441574A809002D0AE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BEA534461574A809002D0AE2 /* XYZMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZMainViewController.h; sourceTree = "<group>"; };
-		BEA534471574A809002D0AE2 /* XYZMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
+		BEA534471574A809002D0AE2 /* XYZMainViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XYZMainViewController.mm; sourceTree = "<group>"; };
 		BEA534491574A809002D0AE2 /* XYZFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZFlipsideViewController.h; sourceTree = "<group>"; };
 		BEA5344A1574A809002D0AE2 /* XYZFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZFlipsideViewController.m; sourceTree = "<group>"; };
 		BEA534551574EB9A002D0AE2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BEA5345D15752629002D0AE2 /* FaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetector.h; sourceTree = "<group>"; };
-		BEA5345E15752629002D0AE2 /* FaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceDetector.m; sourceTree = "<group>"; };
+		BEA5345E15752629002D0AE2 /* FaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetector.mm; sourceTree = "<group>"; };
 		BEA534601575484A002D0AE2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		BEA5346E15768DC6002D0AE2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -98,15 +109,22 @@
 		BEA534371574A809002D0AE2 /* testFace */ = {
 			isa = PBXGroup;
 			children = (
+				BEA3CB051584B7270082E6CF /* haarcascade_eye_tree_eyeglasses.xml */,
+				BEA3CB061584B7270082E6CF /* haarcascade_frontalface_alt.xml */,
+				BEA3CAFE1584AC490082E6CF /* UIAlertView+AlertBox.h */,
+				BEA3CAFF1584AC490082E6CF /* UIAlertView+AlertBox.m */,
+				BEA3CAF91584A8010082E6CF /* UIImage+TransformCVMat.h */,
+				BEA3CAFA1584A8010082E6CF /* UIImage+TransformCVMat.mm */,
+				BEA3CAFB1584A8010082E6CF /* Utilities.h */,
 				BEA534401574A809002D0AE2 /* XYZAppDelegate.h */,
 				BEA534411574A809002D0AE2 /* XYZAppDelegate.m */,
 				BEA534431574A809002D0AE2 /* MainStoryboard.storyboard */,
 				BEA534461574A809002D0AE2 /* XYZMainViewController.h */,
-				BEA534471574A809002D0AE2 /* XYZMainViewController.m */,
+				BEA534471574A809002D0AE2 /* XYZMainViewController.mm */,
 				BEA534491574A809002D0AE2 /* XYZFlipsideViewController.h */,
 				BEA5344A1574A809002D0AE2 /* XYZFlipsideViewController.m */,
 				BEA5345D15752629002D0AE2 /* FaceDetector.h */,
-				BEA5345E15752629002D0AE2 /* FaceDetector.m */,
+				BEA5345E15752629002D0AE2 /* FaceDetector.mm */,
 				BE9C7A83157786D200AD2C5E /* CameraViewController.h */,
 				BE9C7A84157786D200AD2C5E /* CameraViewController.m */,
 				BEA534381574A809002D0AE2 /* Supporting Files */,
@@ -178,6 +196,8 @@
 			files = (
 				BEA5343C1574A809002D0AE2 /* InfoPlist.strings in Resources */,
 				BEA534451574A809002D0AE2 /* MainStoryboard.storyboard in Resources */,
+				BEA3CB071584B7270082E6CF /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
+				BEA3CB081584B7270082E6CF /* haarcascade_frontalface_alt.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,10 +210,12 @@
 			files = (
 				BEA5343E1574A809002D0AE2 /* main.m in Sources */,
 				BEA534421574A809002D0AE2 /* XYZAppDelegate.m in Sources */,
-				BEA534481574A809002D0AE2 /* XYZMainViewController.m in Sources */,
+				BEA534481574A809002D0AE2 /* XYZMainViewController.mm in Sources */,
 				BEA5344B1574A809002D0AE2 /* XYZFlipsideViewController.m in Sources */,
-				BEA5345F15752629002D0AE2 /* FaceDetector.m in Sources */,
+				BEA5345F15752629002D0AE2 /* FaceDetector.mm in Sources */,
 				BE9C7A85157786D200AD2C5E /* CameraViewController.m in Sources */,
+				BEA3CAFC1584A8010082E6CF /* UIImage+TransformCVMat.mm in Sources */,
+				BEA3CB001584AC490082E6CF /* UIAlertView+AlertBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +247,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -251,7 +273,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -272,8 +294,21 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testFace/testFace-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/Users/millan/xcode4.3.2,
+					/Users/millan/OpenCv/2.4.0/include,
+				);
 				INFOPLIST_FILE = "testFace/testFace-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = /Users/millan/OpenCv/2.4.0/lib/Debug;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
+					"-lopencv_core",
+					"-lopencv_highgui",
+					"-lopencv_imgproc",
+					"-lopencv_objdetect",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,8 +320,21 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testFace/testFace-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/Users/millan/xcode4.3.2,
+					/Users/millan/OpenCv/2.4.0/include,
+				);
 				INFOPLIST_FILE = "testFace/testFace-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = /Users/millan/OpenCv/2.4.0/lib/Release;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
+					"-lopencv_core",
+					"-lopencv_highgui",
+					"-lopencv_imgproc",
+					"-lopencv_objdetect",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

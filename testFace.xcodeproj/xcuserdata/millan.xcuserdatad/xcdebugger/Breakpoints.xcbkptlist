@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testFace/XYZMainViewController.m"
-         timestampString = "360163816.151877"
+         timestampString = "360194879.184336"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "194"
-         endingLineNumber = "194"
+         startingLineNumber = "191"
+         endingLineNumber = "191"
          landmarkName = "-workLoadImage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testFace/XYZMainViewController.m"
-         timestampString = "360163816.151877"
+         timestampString = "360194879.184336"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "202"
-         endingLineNumber = "202"
+         startingLineNumber = "199"
+         endingLineNumber = "199"
          landmarkName = "-popoverControllerDidDismissPopover:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,24 +73,63 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testFace/CameraViewController.m"
-         timestampString = "360163816.151877"
+         timestampString = "360191341.953006"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "102"
+         endingLineNumber = "102"
+         landmarkName = "-endCamera"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "testFace/CameraViewController.m"
+         timestampString = "360189111.079908"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
+         landmarkName = "-viewDidAppear:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "testFace/CameraViewController.m"
+         timestampString = "360191341.953006"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
+         landmarkName = "-startCamera"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "testFace/CameraViewController.m"
+         timestampString = "360188559.715129"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "testFace/XYZMainViewController.m"
-         timestampString = "360164248.840985"
+         timestampString = "360194993.87946"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "278"
-         endingLineNumber = "278"
+         startingLineNumber = "273"
+         endingLineNumber = "273"
          landmarkName = "-cameraDidCancel"
          landmarkType = "5">
       </FileBreakpoint>

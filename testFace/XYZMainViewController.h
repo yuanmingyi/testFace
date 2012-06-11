@@ -21,6 +21,7 @@
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 @property (strong, nonatomic) UIPopoverController *imagePickerPopoverController;
 @property (strong, nonatomic) CameraViewController *cameraView;
+//@property (strong, nonatomic) UIImagePickerController *cameraUI;
 
 @property (strong, nonatomic) FaceDetector *faceDetector;
 

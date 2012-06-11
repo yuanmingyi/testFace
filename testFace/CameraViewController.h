@@ -10,8 +10,7 @@
 
 @protocol CameraViewDelegate;
 
-@interface CameraViewController : UIViewController 
-                                    <UIImagePickerControllerDelegate,
+@interface CameraViewController : UIViewController <UIImagePickerControllerDelegate,
                                     UINavigationControllerDelegate>
 @property (weak, nonatomic) id <CameraViewDelegate> delegate;
 
@@ -21,7 +20,7 @@
 - (IBAction)backTouchUp:(id)sender;
 - (IBAction)optionsTouchUp:(id)sender;
 
-- (BOOL)startCamera;
+//- (BOOL)setupImagePicker:(UIImagePickerController*)cameraUI;
 @end
 
 @protocol CameraViewDelegate

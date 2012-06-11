@@ -7,6 +7,7 @@
 //
 
 #import "XYZAppDelegate.h"
+#import "FaceDetector.h"
 
 @implementation XYZAppDelegate
 
@@ -14,6 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [FaceDetector loadCascadeData];
     // Override point for customization after application launch.
     return YES;
 }

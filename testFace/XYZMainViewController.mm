@@ -8,6 +8,7 @@
 
 #import "XYZMainViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
+#import <Utilities/Utilities.h>
 
 //NSString *createDateFileName() {
 //    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; 
@@ -50,6 +51,10 @@
     isDeleteImagePicker_ = NO;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidUnload
 {
     //[self setNavigationBar:nil];
@@ -77,7 +82,7 @@
                         sourceType:(UIImagePickerControllerSourceType)sourceType
                      usingDelegate:(id<UIImagePickerControllerDelegate,
                                     UINavigationControllerDelegate>)delegate {
-    if ([UIImagePickerController isSourceTypeAvailable:sourceType] == NO 
+    if (![UIImagePickerController isSourceTypeAvailable:sourceType] 
         || viewController == nil
         || delegate == nil) {
         return NO;
@@ -91,12 +96,11 @@
     
     cameraUI.allowsEditing = NO;
     cameraUI.delegate = delegate;  
-    cameraUI.showsCameraControls = NO;
-    
-    cameraUI.videoQuality = UIImagePickerControllerQualityTypeHigh;
-    
+   
     if (sourceType == UIImagePickerControllerSourceTypeCamera) {
         cameraUI.cameraOverlayView = self.view;
+        cameraUI.showsCameraControls = NO;
+        cameraUI.videoQuality = UIImagePickerControllerQualityTypeHigh;
         //cameraUI.cameraViewTransform = CGAffineTransformMake(-1,0,0,1,0,0);
         [viewController presentModalViewController:cameraUI animated:YES];
     } else {
@@ -117,19 +121,14 @@
     if (![[NSFileManager defaultManager] removeItemAtURL:self.imageURL 
                                                    error:&error]) {
         // failed to delete
-        UIAlertView *failedAlert = 
-        [[UIAlertView alloc] initWithTitle:@"Failed" 
-                                   message:error.description 
-                                  delegate:nil 
-                         cancelButtonTitle:@"ok"
-                         otherButtonTitles:nil];
-        [failedAlert show];
+        [UIAlertView alertWithTitle:@"Failed" message:error.description];
     }
 }
 
 - (void)updateImage:(UIImage*)image {
-    self.originImage = image;
-    self.imageView.image = image;
+    UIImage *normalizedImage = [image normalizedOrientationImage];
+    self.originImage = normalizedImage;
+    self.imageView.image = normalizedImage;
     [self.faceDetector clearResult];
 }
 
@@ -160,7 +159,7 @@
             [FaceDetector detectorWithSource:source
                                     accuracy:accuracy
                                 detectInGray:YES];
-        [detector detectInImage:originImage];
+        [detector detectInImage:self.originImage];
     self.imageView.image = detector.imageWithFaces;  
     self.faceDetector = detector;
     [controller updateSettings:detector];
@@ -218,9 +217,8 @@ SavedPhotosAlbum
                                     [popoverController contentViewController];
         [self.workViewController updateSettings:self.faceDetector];        
     } else if ([segueIdentifier isEqualToString:@"showCamera"]) {
-        self.cameraView = [segue destinationViewController];
+        self.cameraView = [segue destinationViewController]; 
         self.cameraView.delegate = self;
-        [self.cameraView startCamera];
     }
 }
 
@@ -230,12 +228,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     if (isDeleteImagePicker_) {
         self.imageURL = [info objectForKey:
                          UIImagePickerControllerReferenceURL];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comform" 
-                                                        message:@"Delete?"
-                                                       delegate:self
-                                              cancelButtonTitle:@"NO"
-                                              otherButtonTitles:@"YES",nil];
-        [alert show];                   
+        [UIAlertView alertWithTitle:@"Conform"
+                            message:@"Delete?"
+                           delegate:self
+                  cancelButtonTitle:@"NO"
+                 conformButtonTitle:@"YES"];
         return;
     }
 
@@ -279,6 +276,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 }
 - (void)cameraDidTakeAPhoto:(UIImage *)image {
     [self updateImage:image];
+    //[UIAlertView alertWithMessage:@"Photo taken"];
 }
 
 # pragma mark -- actions responder
@@ -292,9 +290,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 - (IBAction)startCameraResponder:(id)sender {
     if (sender == self.cameraButton) {
         // close the popover
+        [self dismissImagePickerPopover];
+        [self dismissFlipsidePopover];
         [self performSegueWithIdentifier:@"showCamera" sender:sender];
-//        [self dismissImagePickerPopover];
-//        [self dismissFlipsidePopover];
 //        [self startImagePickerController:self 
 //                              sourceType:UIImagePickerControllerSourceTypeCamera
 //                           usingDelegate:self];

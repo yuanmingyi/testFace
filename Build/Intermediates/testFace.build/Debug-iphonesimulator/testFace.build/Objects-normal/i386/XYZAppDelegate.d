@@ -1,3 +1,2 @@
-dependencies: \
-  /Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.m \
-  /Users/millan/Documents/Xcode/testFace/testFace/XYZAppDelegate.h
+dependencies: /Users/millan/xcode4.3.2/testFace/testFace/XYZAppDelegate.m \
+  /Users/millan/xcode4.3.2/testFace/testFace/XYZAppDelegate.h

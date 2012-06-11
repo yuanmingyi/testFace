@@ -7,9 +7,24 @@
 //
 
 #import "FaceDetector.h"
+#import <Utilities/Utilities.h>
+
+class CascadeData {
+public:
+    static cv::CascadeClassifier faceCascade;
+    static cv::CascadeClassifier eyesCascade;
+    static NSString *faceCascadeName; //= @"haarcascade_frontalface_alt";
+    static NSString *eyesCascadeName; //= @"haarcascade_eye_tree_eyeglasses";
+};
+NSString * CascadeData::faceCascadeName = @"haarcascade_frontalface_alt";
+NSString * CascadeData::eyesCascadeName = @"haarcascade_eye_tree_eyeglasses";
+
+cv::CascadeClassifier CascadeData::faceCascade; 
+cv::CascadeClassifier CascadeData::eyesCascade;
 
 @interface FaceDetector ()
-
+- (void)detectFaceWithOpenCV:(CGImageRef)cgImage;
+- (void)detectFaceWithCoreImage:(CGImageRef)cgImage;
 @end
 
 @implementation FaceDetector
@@ -22,6 +37,17 @@
 @synthesize accuracy;
 @synthesize detectorOptions, contextOptions;
 @synthesize detectInGray;
+
++ (void)loadCascadeData {
+    NSString *faceCascadePath = [[NSBundle mainBundle] pathForResource:CascadeData::faceCascadeName ofType:@"xml"];
+    if (!faceCascadePath || !CascadeData::faceCascade.load([faceCascadePath UTF8String])) {
+        NSLog(@"failed loading face cascade classifier!");
+    }  
+    NSString *eyesCascadePath = [[NSBundle mainBundle] pathForResource:CascadeData::eyesCascadeName ofType:@"xml"];
+    if (!eyesCascadePath || !CascadeData::eyesCascade.load([eyesCascadePath UTF8String])) {
+        NSLog(@"failed loading eyes cascade classifier!");
+    }
+}
 
 + (id)detectorWithSource:(DetectorSource)source 
                 accuracy:(DetectorAccuracy)accuracy
@@ -57,19 +83,55 @@
         || inImage.size.height <= 0) {
         return;
     }
+    //UIImage *normalizedImage = [inImage normalizedImage];
+    
     if (self.detectInGray) {
         
     }
     if (self.source == DetectorSourceCoreImage) {
-        [self detectFaceWithCoreImage:inImage];
+        [self detectFaceWithCoreImage:inImage.CGImage];
     } else {
-        
+        [self detectFaceWithOpenCV:inImage.CGImage];
     }
 }
-- (void)detectFaceWithCoreImage:(UIImage*)inImage {
-    CGImageRef cgImage = inImage.CGImage;    
-    CIImage *ciImage = [CIImage imageWithCGImage:cgImage];    
+- (void)detectFaceWithOpenCV:(CGImageRef)cgImage {
+    std::vector<cv::Rect> faces;
+    cv::Mat mat = CGImageCreateMat(cgImage, IplImageTypeBGR), gray;
+    cv::cvtColor(mat, gray, CV_BGR2GRAY);
+    equalizeHist(gray, gray);
     
+    CascadeData::faceCascade.detectMultiScale(gray, faces, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+    
+    // draw faces
+    for (int i = 0; i < faces.size(); i++) {
+        float halfWidth = faces[i].width*0.5;
+        float halfHeight = faces[i].height*0.5;
+        cv::Point center(faces[i].x + halfWidth, faces[i].y + halfHeight);
+        cv::ellipse(mat, center, cv::Size(halfWidth, halfHeight), 0, 0, 360, cv::Scalar(255, 0, 255), 4, 8, 0);
+        
+        cv::Mat faceROI = gray(faces[i]);
+        std::vector<cv::Rect> eyes;
+        //-- In each face, detect eyes
+        CascadeData::eyesCascade.detectMultiScale(faceROI, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+        for (int j = 0; j < eyes.size(); j++) {
+            cv::Point center(faces[i].x + eyes[j].x + eyes[j].width*0.5, faces[i].y + eyes[j].y + eyes[j].height*0.5); 
+            int radius = cvRound((eyes[j].width + eyes[j].height)*0.25);
+            cv::circle(mat, center, radius, cv::Scalar(255, 0, 0), 4, 8, 0);
+        }
+    }
+    
+    imageWithFaces_ = [UIImage imageWithMat:mat];
+    faceCount_ = faces.size();
+    NSMutableArray *facesArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < faceCount_; i++) {
+        CGRect bounds = CGRectMake(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
+        [facesArray addObject:[NSData dataWithBytes:&bounds length:sizeof(bounds)]];
+    }
+    faceRegions_ = facesArray;
+}
+- (void)detectFaceWithCoreImage:(CGImageRef)cgImage {
+    CIImage *ciImage = [CIImage imageWithCGImage:cgImage];    
+
     CIContext *ciContext = [CIContext contextWithOptions:self.contextOptions];
              
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace
